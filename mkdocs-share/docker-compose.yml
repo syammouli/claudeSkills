@@ -1,0 +1,11 @@
+services:
+  # The learning site (this documentation) served with MkDocs Material at
+  # http://localhost:8999
+  docs:
+    build: ./docs
+    container_name: learning-docs
+    ports:
+      - "8999:8999"
+    volumes:
+      # Live-reload: edits to the docs show up immediately.
+      - "./docs:/docs"
